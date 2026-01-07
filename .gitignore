@@ -1,0 +1,19 @@
+# Logs
+backend/cli/logs/
+*.log
+
+# Uploaded user files (keep folder via .gitkeep)
+public/uploads/proofs/*
+!public/uploads/proofs/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# PHP / Composer (if added later)
+vendor/
+
+# Env / secrets
+.env
+.env.*
