@@ -15,8 +15,8 @@ INSERT INTO tasks (title, estimated_minutes, priority, expiry_at, created_by) VA
 ('Clean Database', 45, 'low', DATE_ADD(NOW(), INTERVAL 30 MINUTE), 1);
 
 -- Seed Assignments
-INSERT INTO task_assignments (task_id, user_id, status) VALUES
-(1, 2, 'active'); -- Bob assigned to Fix Login Bug
+INSERT INTO task_assignments (task_id, user_id, status, started_at) VALUES
+(1, 2, 'active', NULL); -- Bob assigned to Fix Login Bug (not started yet)
 
-INSERT INTO task_assignments (task_id, user_id, status, completed_at) VALUES
-(2, 3, 'completed', NOW()); -- Charlie completed Update Documentation
+INSERT INTO task_assignments (task_id, user_id, status, started_at, completed_at) VALUES
+(2, 3, 'completed', DATE_SUB(NOW(), INTERVAL 2 HOUR), DATE_SUB(NOW(), INTERVAL 1 HOUR)); -- Charlie completed Update Documentation

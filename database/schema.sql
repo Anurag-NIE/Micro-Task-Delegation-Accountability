@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS task_assignments (
     id INT AUTO_INCREMENT PRIMARY KEY,
     task_id INT NOT NULL,
     user_id INT NOT NULL,
-    started_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    started_at DATETIME NULL,
     completed_at DATETIME NULL,
     completion_comment TEXT NULL,
     proof_path VARCHAR(255) NULL,
